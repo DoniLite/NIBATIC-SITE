@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { logo } from "../Export";
+import logo from '/logo.jpg'
 import {Github} from 'lucide-react'
 
   
@@ -15,10 +15,10 @@ export function NavBar() {
                                 <NavLink to={'/'} end>Home</NavLink>
                             </li>
                             <li className="link">
-                                <NavLink to={'/About'} end>About</NavLink>
+                                <NavLink to={'/pricing'} end>Pricing</NavLink>
                             </li>
                             <li className="link">
-                                <NavLink to={'/blog'} end>Blog</NavLink>
+                                <NavLink to={'/forum'} end>Forum</NavLink>
                             </li>
                             <li className="link">
                                 <a href="#">
@@ -26,7 +26,7 @@ export function NavBar() {
                                 </a>
                             </li>
                         </ul>
-                        <button className="p-3 bg-white text-blue-800 font-bold ml-6" style={{ borderRadius: '0 20px 0 15px' }}>Contactez-nous</button>
+                        <button className="home-btn" style={{ borderRadius: '0 20px 0 15px' }}>Débuter cursus</button>
                     </div>
                 </div>
             </nav>

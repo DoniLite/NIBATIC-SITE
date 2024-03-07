@@ -1,6 +1,6 @@
 import { NavBar } from "../components/Nav";
 
-export function About(){
+export function Pricing(){
     return(
         <>
             <NavBar />
