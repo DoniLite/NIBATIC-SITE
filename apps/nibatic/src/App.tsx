@@ -1,9 +1,8 @@
 import { createBrowserRouter, Outlet, RouterProvider, useRouteError } from 'react-router-dom'
 import errorImg from './assets/error.jpg'
 import { Home } from './pages/Home'
-import { useEffect } from 'react';
-import { About } from './pages/About';
-import { Blog } from './pages/Blog';
+import { Pricing } from './pages/Pricing';
+import { Forum } from './pages/Forum';
 
 
 
@@ -18,12 +17,12 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: 'about',
-        element: <About />,
+        path: 'pricing',
+        element: <Pricing />,
       },
       {
-        path: 'blog',
-        element: < Blog />,
+        path: 'forum',
+        element: <Forum />,
       }
     ]
   }
@@ -52,26 +51,6 @@ function Root() {
 }
 
 function App() {
-  function navAnime() {
-    const nav = document.querySelector('nav') as HTMLElement
-    const btn = document.querySelector('.nav button') as HTMLButtonElement
-
-    console.log(btn)
-    console.log(window.scrollY)
-    if (window.scrollY > 25) {
-      nav.style.position = 'fixed'
-      nav.classList.add('bg-blue-800', 'left-0', 'top-0', 'right-0', 'p-6')
-      btn.classList.add('text-blue-800')
-    } else {
-      nav.style.position = 'relative'
-      nav.classList.add('left-0', 'top-0', 'right-0', 'p-6')
-    }
-  }
-  useEffect(() => {
-    
-
-    window.addEventListener('scroll', navAnime)
-  }, [])
   return (
     <>
       <RouterProvider router={router}/>
